@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Autofac.PluginBase", "Test.Autofac.PluginBase\Test.Autofac.PluginBase.csproj", "{54F5B5EF-DF21-470F-BB38-2279EF6A23A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Autofac.PluginBase.Library", "Test.Autofac.PluginBase.Library\Test.Autofac.PluginBase.Library.csproj", "{2B16B94F-AD87-47E6-B9D0-AC6C9E48E53E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54F5B5EF-DF21-470F-BB38-2279EF6A23A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54F5B5EF-DF21-470F-BB38-2279EF6A23A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54F5B5EF-DF21-470F-BB38-2279EF6A23A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54F5B5EF-DF21-470F-BB38-2279EF6A23A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B16B94F-AD87-47E6-B9D0-AC6C9E48E53E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B16B94F-AD87-47E6-B9D0-AC6C9E48E53E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B16B94F-AD87-47E6-B9D0-AC6C9E48E53E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B16B94F-AD87-47E6-B9D0-AC6C9E48E53E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4FB00CB6-D251-4F1E-B86C-DDCC66567A26}
+	EndGlobalSection
+EndGlobal
