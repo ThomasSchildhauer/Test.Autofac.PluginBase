@@ -44,8 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assembly\ClassC.cs" />
-    <Compile Include="Autofac\PluginInstantiation.cs" />
+    <Compile Include="Autofac\Container.cs" />
     <Compile Include="Interfaces\IGamesPlugin.cs" />
+    <Compile Include="Loader\IPluginLoader.cs" />
+    <Compile Include="Loader\PluginLoader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

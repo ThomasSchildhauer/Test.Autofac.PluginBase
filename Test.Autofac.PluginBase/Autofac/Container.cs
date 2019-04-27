@@ -6,18 +6,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Test.Autofac.PluginBase.Interfaces;
+using Test.Autofac.PluginBase.Loader;
 
 namespace Test.Autofac.PluginBase.Autofac
 {
-    public class PluginInstantiation
+    public class Container
     {
         private List<Type> _types = new List<Type>();
-
-        public Dictionary<string, IGamesPlugin> Plugins { get; private set; } = new Dictionary<string, IGamesPlugin>();
 
         public ILifetimeScope CreateScope()
         {
             var builder = new ContainerBuilder();
+
+            // Register Types
+            builder.RegisterType<PluginLoader>().As<IPluginLoader>();
 
             // Plugin Registration
             var myType = typeof(IGamesPlugin);
@@ -44,14 +46,13 @@ namespace Test.Autofac.PluginBase.Autofac
             }
 
             // register all types
-            _types.ForEach(t => builder.RegisterType(t).SingleInstance());
+            _types
+                .ForEach(t => builder.RegisterType(t)
+                .WithMetadata(myType.ToString(), t.Name)
+                .As<IGamesPlugin>()
+                .SingleInstance());
 
-            var scope = builder.Build();
-
-            // Fill Dict with Typename as Key and Plugin Object cast to IGamesPlugin
-            _types.ForEach(t => { Plugins.Add(t.Name, (IGamesPlugin)scope.Resolve(t)); });
-
-            return scope;
+            return builder.Build();
         }
     }
 }

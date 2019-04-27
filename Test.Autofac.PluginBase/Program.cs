@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Test.Autofac.PluginBase.Autofac;
 using Test.Autofac.PluginBase.Interfaces;
+using Test.Autofac.PluginBase.Loader;
 
 namespace Test.Autofac.PluginBase
 {
@@ -14,12 +15,15 @@ namespace Test.Autofac.PluginBase
     {
         static void Main(string[] args)
         {
-            var registration = new PluginInstantiation();
-            var scope = registration.CreateScope();
+            var Container = new Autofac.Container();
+            var scope = Container.CreateScope();
 
             using (scope)
             {
-                registration.Plugins.Values.ToList().ForEach(p => p.OnStartup());
+                var loader = scope.Resolve<IPluginLoader>();
+
+                loader.LoadPlugins();
+
                 Console.ReadKey();
             }
         }
