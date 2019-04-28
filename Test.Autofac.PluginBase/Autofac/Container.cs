@@ -35,7 +35,7 @@ namespace Test.Autofac.PluginBase.Autofac
             // this reads all dlls in the folder which holds the executing assembly
             string path = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
-            foreach (string dll in Directory.GetFiles(path, "*.dll"))
+            foreach (string dll in Directory.GetFiles(path, "*.dll", SearchOption.AllDirectories))
             {
                 var assembly = System.Reflection.Assembly.LoadFile(dll);
                 assembly
