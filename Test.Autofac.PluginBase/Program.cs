@@ -16,9 +16,10 @@ namespace Test.Autofac.PluginBase
         static void Main(string[] args)
         {
             var Container = new Autofac.Container();
-            var scope = Container.CreateScope();
 
-            using (scope)
+            var contaier = Container.Config();
+
+            using (var scope = contaier.BeginLifetimeScope())
             {
                 var loader = scope.Resolve<IPluginLoader>();
 

@@ -14,7 +14,7 @@ namespace Test.Autofac.PluginBase.Autofac
     {
         private List<Type> _types = new List<Type>();
 
-        public ILifetimeScope CreateScope()
+        public IContainer Config()
         {
             var builder = new ContainerBuilder();
 
