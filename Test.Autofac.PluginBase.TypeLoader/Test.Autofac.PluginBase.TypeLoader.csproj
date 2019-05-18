@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2B16B94F-AD87-47E6-B9D0-AC6C9E48E53E}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Test.Autofac.PluginBase.Library</RootNamespace>
-    <AssemblyName>Test.Autofac.PluginBase.Library</AssemblyName>
+    <ProjectGuid>{AA604061-0636-4A76-98BF-C67AEB0D2CB8}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Test.Autofac.PluginBase.TypeLoader</RootNamespace>
+    <AssemblyName>Test.Autofac.PluginBase.TypeLoader</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -30,10 +32,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
-  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.9.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.9.2\lib\net45\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,9 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassA.cs" />
-    <Compile Include="ClassB.cs" />
+    <Compile Include="Assembly\ClassC.cs" />
+    <Compile Include="Autofac\Container.cs" />
+    <Compile Include="Loader\IPluginLoader.cs" />
+    <Compile Include="Loader\PluginLoader.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Test.Autofac.PluginBase.Interfaces\Test.Autofac.PluginBase.Interfaces.csproj">
@@ -55,9 +64,4 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>xcopy "$(TargetDir)*.dll" "$(ProjectDir)..\Test.Autofac.PluginBase.TypeLoader\bin\Debug" /Y
-xcopy "$(TargetDir)*.dll" "$(ProjectDir)..\Test.Autofac.PluginBase\bin\Debug" /Y
-xcopy "$(TargetDir)*.dll" "$(ProjectDir)..\Test.Autofac.PluginBase.AssemblyLoader\bin\Debug" /Y</PostBuildEvent>
-  </PropertyGroup>
 </Project>

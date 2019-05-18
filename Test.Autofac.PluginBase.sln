@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Autofac.PluginBase.Lib
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Autofac.PluginBase.AssemblyLoader", "Test.Autofac.PluginBase.AssemblyLoader\Test.Autofac.PluginBase.AssemblyLoader.csproj", "{BE2E8128-977A-4B82-B0A2-482D85291987}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Autofac.PluginBase.TypeLoader", "Test.Autofac.PluginBase.TypeLoader\Test.Autofac.PluginBase.TypeLoader.csproj", "{AA604061-0636-4A76-98BF-C67AEB0D2CB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Autofac.PluginBase.Interfaces", "Test.Autofac.PluginBase.Interfaces\Test.Autofac.PluginBase.Interfaces.csproj", "{BA2E7285-8CE5-43C3-BDB7-92B179FF04BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{BE2E8128-977A-4B82-B0A2-482D85291987}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE2E8128-977A-4B82-B0A2-482D85291987}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE2E8128-977A-4B82-B0A2-482D85291987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA604061-0636-4A76-98BF-C67AEB0D2CB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA604061-0636-4A76-98BF-C67AEB0D2CB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA604061-0636-4A76-98BF-C67AEB0D2CB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA604061-0636-4A76-98BF-C67AEB0D2CB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA2E7285-8CE5-43C3-BDB7-92B179FF04BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA2E7285-8CE5-43C3-BDB7-92B179FF04BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA2E7285-8CE5-43C3-BDB7-92B179FF04BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA2E7285-8CE5-43C3-BDB7-92B179FF04BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

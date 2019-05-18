@@ -5,10 +5,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Test.Autofac.PluginBase.AssemblyLoader.Autofac;
-using Test.Autofac.PluginBase.AssemblyLoader.Loader;
+using Test.Autofac.PluginBase.TypeLoader.Autofac;
+using Test.Autofac.PluginBase.TypeLoader.Loader;
 
-namespace Test.Autofac.PluginBase.AssemblyLoader
+namespace Test.Autofac.PluginBase.TypeLoader
 {
     class Program
     {

@@ -5,8 +5,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Test.Autofac.PluginBase.AssemblyLoader.Interfaces;
 using Test.Autofac.PluginBase.AssemblyLoader.Loader;
+using Test.Autofac.PluginBase.Interfaces;
 
 namespace Test.Autofac.PluginBase.AssemblyLoader.Autofac
 {

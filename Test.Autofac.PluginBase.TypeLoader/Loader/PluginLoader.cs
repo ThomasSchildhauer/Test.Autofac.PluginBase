@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Test.Autofac.PluginBase.Interfaces;
 
-namespace Test.Autofac.PluginBase.AssemblyLoader.Loader
+namespace Test.Autofac.PluginBase.TypeLoader.Loader
 {
     public class PluginLoader : IPluginLoader
     {

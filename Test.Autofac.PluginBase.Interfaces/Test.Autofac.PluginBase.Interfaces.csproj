@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2B16B94F-AD87-47E6-B9D0-AC6C9E48E53E}</ProjectGuid>
+    <ProjectGuid>{BA2E7285-8CE5-43C3-BDB7-92B179FF04BD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Test.Autofac.PluginBase.Library</RootNamespace>
-    <AssemblyName>Test.Autofac.PluginBase.Library</AssemblyName>
+    <RootNamespace>Test.Autofac.PluginBase.Interfaces</RootNamespace>
+    <AssemblyName>Test.Autofac.PluginBase.Interfaces</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -30,9 +30,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -44,20 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassA.cs" />
-    <Compile Include="ClassB.cs" />
+    <Compile Include="IGamesPlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Test.Autofac.PluginBase.Interfaces\Test.Autofac.PluginBase.Interfaces.csproj">
-      <Project>{ba2e7285-8ce5-43c3-bdb7-92b179ff04bd}</Project>
-      <Name>Test.Autofac.PluginBase.Interfaces</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>xcopy "$(TargetDir)*.dll" "$(ProjectDir)..\Test.Autofac.PluginBase.TypeLoader\bin\Debug" /Y
-xcopy "$(TargetDir)*.dll" "$(ProjectDir)..\Test.Autofac.PluginBase\bin\Debug" /Y
-xcopy "$(TargetDir)*.dll" "$(ProjectDir)..\Test.Autofac.PluginBase.AssemblyLoader\bin\Debug" /Y</PostBuildEvent>
-  </PropertyGroup>
 </Project>

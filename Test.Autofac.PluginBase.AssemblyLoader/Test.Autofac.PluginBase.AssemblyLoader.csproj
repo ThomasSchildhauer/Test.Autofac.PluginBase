@@ -44,7 +44,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Autofac\Container.cs" />
-    <Compile Include="Interfaces\IGamesPlugin.cs" />
     <Compile Include="Loader\IPluginLoader.cs" />
     <Compile Include="Loader\PluginLoader.cs" />
     <Compile Include="Program.cs" />
@@ -57,6 +56,12 @@
     <PackageReference Include="Autofac">
       <Version>4.9.2</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Test.Autofac.PluginBase.Interfaces\Test.Autofac.PluginBase.Interfaces.csproj">
+      <Project>{ba2e7285-8ce5-43c3-bdb7-92b179ff04bd}</Project>
+      <Name>Test.Autofac.PluginBase.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
