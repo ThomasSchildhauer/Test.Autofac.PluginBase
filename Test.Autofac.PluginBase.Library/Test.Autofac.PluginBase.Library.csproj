@@ -34,6 +34,9 @@
     <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.9.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.9.2\lib\net45\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,15 +47,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Autofac\AutofacModul.cs" />
     <Compile Include="ClassA.cs" />
     <Compile Include="ClassB.cs" />
+    <Compile Include="Autofac\IRegisteredClass.cs" />
+    <Compile Include="Autofac\PluginStartClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Autofac\RegisteredClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Test.Autofac.PluginBase.Interfaces\Test.Autofac.PluginBase.Interfaces.csproj">
       <Project>{ba2e7285-8ce5-43c3-bdb7-92b179ff04bd}</Project>
       <Name>Test.Autofac.PluginBase.Interfaces</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

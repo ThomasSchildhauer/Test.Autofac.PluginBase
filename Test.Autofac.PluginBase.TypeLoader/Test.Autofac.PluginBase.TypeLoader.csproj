@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assembly\ClassC.cs" />
-    <Compile Include="Autofac\Container.cs" />
+    <Compile Include="IOC\Container.cs" />
     <Compile Include="Loader\IPluginLoader.cs" />
     <Compile Include="Loader\PluginLoader.cs" />
     <Compile Include="Program.cs" />

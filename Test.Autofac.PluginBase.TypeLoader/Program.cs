@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Test.Autofac.PluginBase.TypeLoader.Autofac;
+using Test.Autofac.PluginBase.TypeLoader.IOC;
 using Test.Autofac.PluginBase.TypeLoader.Loader;
 
 namespace Test.Autofac.PluginBase.TypeLoader
@@ -14,7 +14,7 @@ namespace Test.Autofac.PluginBase.TypeLoader
     {
         static void Main(string[] args)
         {
-            var Container = new Autofac.Container();
+            var Container = new IOC.Container();
 
             var contaier = Container.Config();
 
